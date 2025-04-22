@@ -387,3 +387,31 @@ Let’s simulate how the **Operating System** handles the execution of a C++ pro
 - **Average Turnaround Time** = (5 + 7 + 7) / 3 = **6.33 ms**  
 - **Average Waiting Time** = (0 + 4 + 6) / 3 = **3.33 ms**  
 - **Average Response Time** = (0 + 4 + 6) / 3 = **3.33 ms**
+
+## 🔥 Challenging Example Dataset
+
+### 📊 Given:
+
+| Process | Arrival Time (AT) | Burst Time (BT) |
+|---------|-------------------|-----------------|
+| P1      | 0                 | 10              |
+| P2      | 2                 | 1               |
+| P3      | 4                 | 2               |
+| P4      | 6                 | 1               |
+| P5      | 8                 | 5               |
+
+---
+
+## ✏️ Tasks to Complete
+
+### 🔹 1. Draw the **Gantt Chart** based on selected algorithm
+
+---
+
+### 🔹 2. Compute for Each Process:
+
+- **Completion Time (CT)**  
+- **Turnaround Time (TAT = CT - AT)**  
+- **Waiting Time (WT = TAT - BT)**  
+- **Response Time (RT = First Start Time - AT)**
+
