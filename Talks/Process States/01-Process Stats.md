@@ -357,3 +357,33 @@ Let’s simulate how the **Operating System** handles the execution of a C++ pro
 | Input from user      | **Waiting**       | `cin >> a >> b;` waits for keyboard input     |
 | CPU resumes          | **Ready → Running** | After input, calculates and prints          |
 | Finish               | **Terminated**    | Process ends, memory cleaned                  |
+
+## ✅ Simple FCFS Scheduling Example
+
+---
+
+### 🔢 Given:
+
+| Process | Arrival Time (AT) | Burst Time (BT) |
+|---------|-------------------|-----------------|
+| P1      | 0                 | 5               |
+| P2      | 1                 | 3               |
+| P3      | 2                 | 1               |
+
+---
+
+### 📊 Execution (FCFS Order: P1 → P2 → P3)
+
+| Process | Start Time | Completion Time (CT) | Turnaround Time (TAT = CT - AT) | Waiting Time (WT = TAT - BT) | Response Time (RT = Start - AT) |
+|---------|------------|----------------------|----------------------------------|-------------------------------|----------------------------------|
+| P1      | 0          | 5                    | 5                                | 0                             | 0                                |
+| P2      | 5          | 8                    | 7                                | 4                             | 4                                |
+| P3      | 8          | 9                    | 7                                | 6                             | 6                                |
+
+---
+
+### 📈 Averages:
+
+- **Average Turnaround Time** = (5 + 7 + 7) / 3 = **6.33 ms**  
+- **Average Waiting Time** = (0 + 4 + 6) / 3 = **3.33 ms**  
+- **Average Response Time** = (0 + 4 + 6) / 3 = **3.33 ms**
