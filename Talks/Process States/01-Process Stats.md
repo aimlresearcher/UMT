@@ -283,3 +283,77 @@ A **scheduler** is a component of the **operating system** responsible for selec
                             ↑                    ↓
                    (Medium Suspend)      (I/O wait, exit, etc.)
 ```
+## ✅ Step 1: C++ Program – Add Two Numbers
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, sum;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    sum = a + b;
+    cout << "Sum is: " << sum << endl;
+    return 0;
+}
+```
+---
+
+### 💾 Saving the Program on Disk
+- You write this code in a file: `add_numbers.cpp`  
+- You compile it using: ```g++ add_numbers.cpp -o add_numbers``` 
+- The output binary ```add_numbers.exe ``` (or just ``` add_numbers ``` ) is saved on disk
+
+## 🧠 Applying OS Process States and Schedulers
+
+Let’s simulate how the **Operating System** handles the execution of a C++ program (`add_numbers`) as a process.
+
+---
+
+### 🔁 Process State Transitions
+
+| State              | Analogy in This Program                                                 |
+|--------------------|-------------------------------------------------------------------------|
+| **New**            | You execute `./add_numbers` → OS creates a new process                  |
+| **Ready**          | OS allocates memory, I/O, etc. → Process enters the **ready queue**     |
+| **Running**        | CPU starts executing `main()` → Program begins and prompts for input    |
+| **Waiting (Blocked)** | Program waits for `cin` → User enters values (I/O wait)              |
+| **Ready (again)**  | Input completed → Process returns to the ready queue                    |
+| **Running**        | CPU resumes → Calculates sum and displays output                        |
+| **Terminated**     | Program finishes → OS cleans up resources and removes process           |
+
+---
+
+### ⚙️ Schedulers in Action
+
+| Scheduler                  | Role in This Program                                                                 |
+|----------------------------|----------------------------------------------------------------------------------------|
+| **Long-Term Scheduler**    | OS decides whether to **admit the job** (i.e., launch the program)                   |
+|                            | If the system is overloaded, it may **delay or reject** the request                   |
+| **Medium-Term Scheduler**  | If **RAM is full**, the OS may **suspend (swap out)** the process temporarily         |
+|                            | It resumes the process when **resources are available**                               |
+| **Short-Term Scheduler**   | Selects the process from the **ready queue** to assign the CPU                        |
+|                            | May **preempt** it if a **higher-priority process** arrives                           |
+
+---
+
+### 📊 Full Analogy Flow
+
+1. **You run the program** → OS admits the job → **New state**
+2. **Memory & I/O allocated** → Job moves to **Ready**
+3. **CPU executes** `main()` → **Running**
+4. Program asks for input (`cin`) → **Waiting**
+5. After input → Back to **Ready**
+6. CPU resumes → **Running** → Calculates and displays sum
+7. Execution ends → **Terminated**
+
+## 📝 Summary Table
+
+| Stage                | OS Concept       | C++ Program Behavior                          |
+|----------------------|------------------|-----------------------------------------------|
+| Program execution    | **New state**     | `add_numbers` is launched                     |
+| Process waits in RAM | **Ready**         | Process is queued for CPU                     |
+| CPU runs process     | **Running**       | Code executes, prompts for input              |
+| Input from user      | **Waiting**       | `cin >> a >> b;` waits for keyboard input     |
+| CPU resumes          | **Ready → Running** | After input, calculates and prints          |
+| Finish               | **Terminated**    | Process ends, memory cleaned                  |
