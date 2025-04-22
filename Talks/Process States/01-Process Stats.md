@@ -276,7 +276,7 @@ A **scheduler** is a component of the **operating system** responsible for selec
 ---
 
 ## 📥 Visual Summary (Process Flow)
-
+```sql
     +--------+           +-------+           +--------+         
     |  NEW   | --(Long)→ | READY | --(Short)→| RUNNING|         
     +--------+           +-------+           +--------+         
