@@ -415,3 +415,73 @@ Let’s simulate how the **Operating System** handles the execution of a C++ pro
 - **Waiting Time (WT = TAT - BT)**  
 - **Response Time (RT = First Start Time - AT)**
 
+---
+# 🧠 Key Scheduling Terms Explained
+
+---
+
+## 1. 🕐 Arrival Time (AT)
+**Definition:**  
+The time at which a process enters the **ready queue** (i.e., becomes ready for execution).
+
+**Example:**  
+If Process P1 arrives at time **2**, then **AT = 2**
+
+---
+
+## 2. ⚙️ Burst Time (BT)
+**Definition:**  
+The total time required by the process to **execute on the CPU** (excluding any I/O wait time).
+
+**Also Known As:**  
+- Execution Time  
+- CPU Time
+
+---
+
+## 3. ✅ Completion Time (CT)
+**Definition:**  
+The time at which a process **finishes its execution** completely.
+
+**Example:**  
+If Process P1 ends at time **10**, then **CT = 10**
+
+---
+
+## 4. 🔁 Turnaround Time (TAT)
+**Definition:**  
+The total time taken by a process from **arrival** to **completion**.
+
+**Formula:**
+$Turnaround Time (TAT) = Completion Time - Arrival Time$
+
+---
+
+## 5. ⌛ Waiting Time (WT)
+**Definition:**  
+The total time a process spends **waiting in the ready queue** (not executing on the CPU).
+
+**Formula:**
+$Waiting Time (WT) = Turnaround Time - Burst Time$
+
+---
+
+## 6. 🚦 Response Time (RT)
+**Definition:**  
+The time from **arrival** of the process to its **first execution** on the CPU.
+
+**Formula:**
+$Response Time (RT) = First CPU Start Time - Arrival Time$
+
+---
+
+## 🧾 Quick Example
+
+| Process | Arrival Time (AT) | Start Time | Burst Time (BT) | Completion Time (CT) |
+|---------|--------------------|------------|------------------|----------------------|
+| P1      | 0                  | 2          | 5                | 7                    |
+
+### Calculations:
+- **TAT** = CT - AT = 7 - 0 = **7**  
+- **WT**  = TAT - BT = 7 - 5 = **2**  
+- **RT**  = Start - AT = 2 - 0 = **2**
