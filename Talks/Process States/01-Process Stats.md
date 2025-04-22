@@ -485,3 +485,87 @@ $Response Time (RT) = First CPU Start Time - Arrival Time$
 - **TAT** = CT - AT = 7 - 0 = **7**  
 - **WT**  = TAT - BT = 7 - 5 = **2**  
 - **RT**  = Start - AT = 2 - 0 = **2**
+---
+## ✅ 1. FCFS – First-Come, First-Served
+
+### 📝 Problem Statement:
+A computer service center processes user support tickets on a first-come, first-served basis.  
+Each ticket has a fixed amount of processing time. Once a ticket is started, it must be completed before the next one is handled.
+
+### Ticket Information:
+
+| Ticket ID | Arrival Time (AT) | Burst Time (BT) |
+|-----------|--------------------|-----------------|
+| T1        | 0                  | 6               |
+| T2        | 2                  | 8               |
+| T3        | 4                  | 7               |
+| T4        | 5                  | 3               |
+| T5        | 6                  | 5               |
+
+### 📌 Task:
+- Schedule the tickets using **FCFS**
+- Calculate:
+  - **Completion Time (CT)**
+  - **Turnaround Time (TAT)**
+  - **Waiting Time (WT)**
+  - **Response Time (RT)**
+  - **Average TAT**, **Average WT**, **Average RT**
+- Draw a **Gantt Chart**
+
+---
+
+## ✅ 2. SJF – Shortest Job First (Non-Preemptive)
+
+### 📝 Problem Statement:
+A hospital lab processes diagnostic tests.  
+The technician picks the **shortest test** (based on processing time) from those that have already arrived.  
+Once started, a test **cannot be interrupted**.
+
+### Test Information:
+
+| Test ID | Arrival Time (AT) | Burst Time (BT) |
+|---------|--------------------|-----------------|
+| L1      | 0                  | 9               |
+| L2      | 1                  | 4               |
+| L3      | 2                  | 2               |
+| L4      | 3                  | 5               |
+| L5      | 4                  | 3               |
+
+### 📌 Task:
+- Schedule the tests using **SJF (non-preemptive)**
+- Calculate:
+  - **Completion Time (CT)**
+  - **Turnaround Time (TAT)**
+  - **Waiting Time (WT)**
+  - **Response Time (RT)**
+  - **Average TAT**, **Average WT**, **Average RT**
+- Draw a **Gantt Chart**
+
+---
+
+## ✅ 3. Priority Scheduling – Non-Preemptive
+
+### 📝 Problem Statement:
+In an emergency dispatch system, incoming incidents are assigned a **priority value**  
+(**1 = highest priority**).  
+The dispatcher always selects the **highest priority case** among all that have arrived.
+
+### Incident Data:
+
+| Incident ID | Arrival Time (AT) | Burst Time (BT) | Priority |
+|-------------|--------------------|-----------------|----------|
+| I1          | 0                  | 4               | 2        |
+| I2          | 1                  | 3               | 1        |
+| I3          | 2                  | 6               | 4        |
+| I4          | 3                  | 5               | 3        |
+| I5          | 4                  | 2               | 1        |
+
+### 📌 Task:
+- Schedule the incidents using **Non-Preemptive Priority Scheduling**
+- Calculate:
+  - **Completion Time (CT)**
+  - **Turnaround Time (TAT)**
+  - **Waiting Time (WT)**
+  - **Response Time (RT)**
+  - **Average TAT**, **Average WT**, **Average RT**
+- Draw a **Gantt Chart**
