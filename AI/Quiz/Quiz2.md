@@ -140,9 +140,7 @@ From `S → H → C → D → F (g=9)`:
 ## ✅ A* Algorithm in Python
 
 ```python
-import heapq
-
-# Graph definition
+# Graph with edge costs
 graph = {
     'S': {'A': 8, 'H': 4, 'I': 9},
     'A': {'S': 8, 'B': 5, 'H': 3},
@@ -158,53 +156,67 @@ graph = {
 
 # Heuristic values
 heuristics = {
-    'S': 11,
-    'A': 9,
-    'B': 7,
-    'C': 4,
-    'D': 3,
-    'E': 2,
-    'F': 4,
-    'G': 0,
-    'H': 6,
-    'I': 7
+    'S': 11, 'A': 9, 'B': 7, 'C': 4, 'D': 3,
+    'E': 2, 'F': 4, 'G': 0, 'H': 6, 'I': 7
 }
 
-def a_star_search(start, goal):
-    # Priority queue: (f_score, g_score, node, path)
-    open_list = [(heuristics[start], 0, start, [start])]
-    visited = set()
+def a_star_list_priority(start, goal):
+    open_list = [{'node': start, 'f': heuristics[start], 'g': 0, 'path': [start]}]
+    closed_list = set()
+    step = 1
+
+    print(f"Starting A* Search from '{start}' to '{goal}'\n")
 
     while open_list:
-        f, g, current, path = heapq.heappop(open_list)
+        # Sort open list by f value
+        open_list.sort(key=lambda x: x['f'])
+        current_item = open_list.pop(0)
+        current_node = current_item['node']
+        current_g = current_item['g']
+        current_path = current_item['path']
 
-        if current in visited:
-            continue
-        visited.add(current)
+        print(f"Step {step}:")
+        print("Priority Queue:")
+        for item in open_list:
+            print(f"  Node: {item['node']}, f: {item['f']}, g: {item['g']}, path: {' -> '.join(item['path'])}")
+        print(f"\nExpanding Node: {current_node}")
+        print(f"  g(n): {current_g}, h(n): {heuristics[current_node]}, f(n): {current_item['f']}\n")
 
-        if current == goal:
-            return path, g  # Found the goal
+        if current_node == goal:
+            print("Goal Reached\n")
+            return current_path, current_g
 
-        for neighbor, cost in graph[current].items():
-            if neighbor not in visited:
-                g_new = g + cost
-                f_new = g_new + heuristics[neighbor]
-                heapq.heappush(open_list, (f_new, g_new, neighbor, path + [neighbor]))
+        closed_list.add(current_node)
 
-    return None, float('inf')  # No path found
+        for neighbor, cost in graph[current_node].items():
+            if neighbor in closed_list:
+                continue
 
-# Run the algorithm
-path, cost = a_star_search('S', 'G')
+            g_new = current_g + cost
+            f_new = g_new + heuristics[neighbor]
+            path_new = current_path + [neighbor]
 
-# Output
-print("Shortest Path:", " → ".join(path))
+            # Check if neighbor is already in open_list with better or same g
+            in_open = next((item for item in open_list if item['node'] == neighbor), None)
+            if in_open:
+                if g_new < in_open['g']:
+                    in_open['g'] = g_new
+                    in_open['f'] = f_new
+                    in_open['path'] = path_new
+            else:
+                open_list.append({'node': neighbor, 'f': f_new, 'g': g_new, 'path': path_new})
+
+        step += 1
+
+    print("No path found\n")
+    return None, float('inf')
+
+# Execute the algorithm
+path, cost = a_star_list_priority('S', 'G')
+
+# Final output
+print("Shortest Path:", " -> ".join(path))
 print("Total Cost:", cost)
 ```
-## ✅ Output
 
-When you run this script, the output will be:
-```python
-Shortest Path: S → H → C → D → F → G
-Total Cost: 13
-```
 
