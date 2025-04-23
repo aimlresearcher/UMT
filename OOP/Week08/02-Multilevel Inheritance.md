@@ -1,4 +1,5 @@
-# 🎯 Learning Objectives
+# 🎓 Lecture: Multilevel Inheritance in C++
+## 🎯 Learning Objectives
 
 By the end of this lecture, students will be able to:
 
