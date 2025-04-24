@@ -331,3 +331,221 @@ Enable fast processing of large-scale or complex datasets that exceed normal com
 - Apache Hadoop  
 - Apache Spark  
 - CUDA for GPU computing
+## ⚠️ 5. Major Issues in Data Mining
+
+While data mining offers powerful insights, it also faces several critical challenges. Understanding these issues is essential for designing effective and ethical data-driven solutions.
+
+---
+
+### 📈 5.1 Scalability  
+**Problem:**  
+Can the system handle massive amounts of data efficiently?
+
+**Why it matters:**  
+Modern datasets are growing rapidly in volume (TBs to PBs) and dimensionality (number of attributes).
+
+**Challenges:**  
+- Traditional algorithms may become too slow or run out of memory  
+- Need for parallel and distributed solutions
+
+**Solution Approaches:**  
+- Scalable algorithms (e.g., Mini-Batch k-means)  
+- Use of Apache Spark, Hadoop, and GPU-based computing
+
+---
+
+### ⚠️ 5.2 Data Quality  
+**Problem:**  
+How reliable and clean is the input data?
+
+**Why it matters:**  
+“Garbage in, garbage out” — dirty or incomplete data leads to misleading patterns or incorrect predictions.
+
+**Common Data Issues:**  
+- Missing values  
+- Duplicate records  
+- Noisy data (random errors)  
+- Inconsistent formats
+
+**Solution Approaches:**  
+- Data cleaning, normalization, and preprocessing  
+- Outlier detection and handling missing values
+
+---
+
+### 🔐 5.3 Privacy and Security  
+**Problem:**  
+Is user data being used ethically and securely?
+
+**Why it matters:**  
+Mining personal or sensitive data without consent can breach privacy laws and damage public trust.
+
+**Examples:**  
+- Mining health records without anonymization  
+- Predicting user behavior from social media without permission
+
+**Solution Approaches:**  
+- Data anonymization and differential privacy  
+- Ethical data mining practices and regulatory compliance (e.g., GDPR)
+
+---
+
+### ⏱️ 5.4 Real-Time Mining  
+**Problem:**  
+Can insights be derived and acted upon instantly as data streams in?
+
+**Why it matters:**  
+In domains like fraud detection, stock trading, or IoT systems, delays can cause financial or operational loss.
+
+**Challenges:**  
+- Processing continuous streams of data  
+- Making quick decisions with incomplete data
+
+**Solution Approaches:**  
+- Real-time processing frameworks (e.g., Apache Kafka, Flink)  
+- Online learning algorithms that update on-the-fly
+## 📦 6. Data Objects and Attribute Types
+
+In data mining, it's crucial to understand the types of data you’re working with, as this influences the choice of preprocessing techniques and mining algorithms.
+
+---
+
+### 🧱 6.1 Data Objects and Attributes  
+- **Data Object (Instance or Tuple):**  
+A data object represents a record or instance in a dataset.  
+**Example:** A customer entry in a retail database (name, age, city, purchase amount).
+
+- **Attributes (Features or Variables):**  
+Attributes describe properties of a data object. Each attribute has a type, which determines how it can be processed.
+
+---
+
+### 🏷️ 6.2 Attribute Types
+
+| **Type**   | **Description**                                                      | **Examples**                               |
+|------------|----------------------------------------------------------------------|--------------------------------------------|
+| **Nominal** | Categorical values with no natural order                             | Gender (Male/Female), City                |
+| **Ordinal** | Ordered categories with no fixed distance                           | Ratings (Low, Medium, High)               |
+| **Interval** | Numeric values with meaningful distances, but no true zero          | Temperature in Celsius                    |
+| **Ratio**    | Numeric values with meaningful zero point and ratios                | Age, Salary, Product Price                |
+
+**Note:**  
+- Use scaling and normalization techniques depending on attribute type.  
+- **Nominal/Ordinal** = categorical encoding  
+- **Interval/Ratio** = numerical preprocessing
+
+---
+
+### 🧾 6.3 Structured vs. Unstructured Data
+
+| **Type**            | **Description**                                                  | **Examples**                                |
+|---------------------|------------------------------------------------------------------|---------------------------------------------|
+| **Structured Data**  | Organized in tables with rows and columns. Easy to query and analyze. | Relational databases (e.g., MySQL, Oracle)  |
+| **Unstructured Data**| Does not follow a pre-defined format. Harder to analyze directly. | Text, images, audio, video, social media data |
+
+---
+
+### 🧩 6.4 Data Formats in Data Mining
+
+- **📄 Record Data (Flat Files):**  
+  Standard rows and columns format.  
+  **Example:** CSV files of customer purchases.
+
+- **🔗 Graph Data:**  
+  Data represented as nodes and edges.  
+  **Example:** Social networks, citation networks, road maps.
+
+- **⏳ Time-Series Data:**  
+  Sequential data points collected over time intervals.  
+  **Example:** Stock prices, ECG signals, weather records.
+
+- **🗺️ Spatial Data:**  
+  Data with spatial or geographical components.  
+  **Example:** Satellite images, GIS maps, GPS location data.
+## 📝 In-Class Activities – Week 01
+
+---
+
+### 💬 1. Discussion: Real-World Use Cases of Data Mining  
+**Objective:**  
+Connect theory to practice by exploring real applications of data mining.
+
+**Instructions:**  
+- Ask students to brainstorm and list industries where data mining is commonly used.  
+- Guide them with prompts like:  
+  - "How does Netflix suggest what you might watch next?"  
+  - "How do banks detect unusual transactions?"  
+- Encourage them to cite local examples, e.g., mobile wallet promotions, online shopping suggestions, etc.
+
+**Expected Outcome:**  
+Students understand diverse data mining applications across healthcare, retail, finance, telecom, and education.
+
+---
+
+### 🤝 2. Think-Pair-Share: What Data Do You Generate Daily?  
+**Objective:**  
+Help students recognize the scale and value of their own digital footprints.
+
+**Steps:**  
+1. **Think (2 min):** Individually list 5 types of personal data they generate each day (e.g., Google searches, locations visited, social media posts).  
+2. **Pair (3 min):** Share with a classmate and compare notes.  
+3. **Share (5 min):** Volunteer pairs share with the class.
+
+**Board Activity Idea:**  
+Build a “Personal Data Wall” on the whiteboard or digitally to visualize the collective data.
+
+---
+
+### 🧠 3. Quick Quiz: Attribute Type Classification  
+**Objective:**  
+Reinforce understanding of nominal, ordinal, interval, and ratio attributes.
+
+**Instructions:**  
+- Distribute a 5-question mini quiz or do a Kahoot! quiz with examples like:  
+  - “Temperature in Celsius” → Interval  
+  - “Blood Type” → Nominal  
+  - “Customer Satisfaction (1–5)” → Ordinal  
+  - “Monthly Income” → Ratio  
+  - “Marital Status” → Nominal  
+
+**Bonus Round:**  
+- Include 2 tricky ones (e.g., ZIP code, jersey number) and ask why they chose a particular type.
+## 📤 Assigned Tasks – Week 01
+
+---
+
+### 📚 Reading Assignment  
+**Chapters:** 1 & 2  
+**Textbook:** “Data Mining: Concepts and Techniques” (3rd Edition) by Jiawei Han, Micheline Kamber, Jian Pei
+
+#### 🔍 Focus Areas:
+- What is data mining?  
+- Knowledge Discovery in Databases (KDD) process  
+- Data types, data quality issues, and attribute types  
+- Major challenges in data mining  
+- Real-life applications across various domains
+
+#### Submission:  
+Be prepared for a short in-class quiz or discussion based on this reading in Week 02.
+
+---
+
+### 💻 Self-Study Assignment  
+**Topic:** Introduction to Data Mining Tools
+
+#### ✅ Task:  
+Choose one data mining tool to explore from the list below:
+- 🛠️ **Weka** – GUI-based tool for ML algorithms (ideal for beginners)  
+- 🧪 **RapidMiner** – Drag-and-drop interface for building data workflows  
+- 🐍 **Orange** – Visual programming with Python backend  
+- 💾 **R (with RStudio)** – Statistical computing with mining libraries  
+- ☁️ **KNIME** – Open-source analytics platform
+
+#### ✍️ Write a short summary (~150 words) covering:  
+- Name of the tool  
+- What kind of data mining tasks it supports (e.g., classification, clustering)  
+- Key features (e.g., GUI, scripting, integrations)  
+- Personal impressions or difficulties  
+
+#### Submission:  
+Bring a printed or handwritten version to class OR upload to LMS before the next lecture.
