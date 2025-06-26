@@ -102,9 +102,7 @@ Predict the price of a **new house**:
 
 Distance formula:
 
-$
-d = \sqrt{(x_1 - x_1')^2 + (x_2 - x_2')^2}
-$
+$d = \sqrt{(x_1 - x_1')^2 + (x_2 - x_2')^2}$
 
 Let the query house be \( Q = (1800, 3) \)
 
@@ -139,9 +137,7 @@ Sort by distance:
 
 ## 🧮 Step 4: Predict Price (Average of k nearest neighbors)
 
-$
-\hat{y} = \frac{308 + 255 + 279}{3} = \frac{842}{3} \approx 280.67
-$
+$\hat{y} = \frac{308 + 255 + 279}{3} = \frac{842}{3} \approx 280.67$
 
 ---
 
@@ -149,9 +145,7 @@ $
 
 > 🏠 A house with **1800 sqft** and **3 bedrooms** is predicted to cost:
 >
-> $
-> \boxed{\$280,670}
-> $
+> $\boxed{\$280,670}$
 
 ---
 

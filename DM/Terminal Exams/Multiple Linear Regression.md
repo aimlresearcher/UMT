@@ -42,9 +42,7 @@ In the real estate industry, house price prediction is crucial for buyers, selle
 ## Goals
 
 - Fit a **multiple linear regression** model of the form:  
-  $
-  \hat{Y} = b_0 + b_1 \cdot X_1 + b_2 \cdot X_2
-  $
+  $\hat{Y} = b_0 + b_1 \cdot X_1 + b_2 \cdot X_2$
 - Interpret the coefficients $( b_1 )$ and $( b_2 )$ to understand how each feature affects price.
 - Evaluate model performance using:
   - Mean Squared Error (MSE)
@@ -71,9 +69,7 @@ Predict the **price of a house** based on:
 
 Using a multiple linear regression model of the form:
 
-$
-\hat{Y} = b_0 + b_1 \cdot X_1 + b_2 \cdot X_2
-$
+$\hat{Y} = b_0 + b_1 \cdot X_1 + b_2 \cdot X_2$
 
 ---
 
@@ -98,15 +94,11 @@ $
 
 We want to estimate the coefficients $( b_0, b_1, b_2 )$ in:
 
-$
-\hat{Y} = b_0 + b_1 \cdot X_1 + b_2 \cdot X_2
-$
+$\hat{Y} = b_0 + b_1 \cdot X_1 + b_2 \cdot X_2$
 
 We use the **normal equation**:
 
-$
-\mathbf{b} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathbf{Y}
-$
+$\mathbf{b} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathbf{Y}$
 
 Where:
 
@@ -117,8 +109,7 @@ Where:
 
 Let:
 
-$
-X =
+$X =
 \begin{bmatrix}
 1 & 1400 & 3 \\
 1 & 1600 & 3 \\
@@ -143,28 +134,21 @@ Y =
 324 \\
 319 \\
 255
-\end{bmatrix}
-$
+\end{bmatrix}$
 
 Then compute:
 
-$
-b = (X^T X)^{-1} X^T Y
-$
+$b = (X^T X)^{-1} X^T Y$
 
 Due to matrix complexity, let’s assume the resulting coefficients after solving are:
 
-$
-b_0 = 68.2,\quad b_1 = 0.087,\quad b_2 = 12.6
-$
+$b_0 = 68.2,\quad b_1 = 0.087,\quad b_2 = 12.6$
 
 ---
 
 ## Step 3: Final Regression Equation
 
-$
-\hat{Y} = 68.2 + 0.087 \cdot \text{Size} + 12.6 \cdot \text{Bedrooms}
-$
+$\hat{Y} = 68.2 + 0.087 \cdot \text{Size} + 12.6 \cdot \text{Bedrooms}$
 
 ---
 
@@ -172,9 +156,7 @@ $
 
 **Example:** Predict the price for a 2000 sqft, 4-bedroom house:
 
-$
-\hat{Y} = 68.2 + 0.087 \cdot 2000 + 12.6 \cdot 4 = 68.2 + 174 + 50.4 = 292.6
-$
+$\hat{Y} = 68.2 + 0.087 \cdot 2000 + 12.6 \cdot 4 = 68.2 + 174 + 50.4 = 292.6$
 
 **Predicted Price:** \$292,600
 
@@ -186,21 +168,15 @@ To evaluate, compute residuals $( Y - \hat{Y} )$ and calculate:
 
 ### Mean Squared Error (MSE)
 
-$
-\text{MSE} = \frac{1}{n} \sum (Y_i - \hat{Y}_i)^2
-$
+$\text{MSE} = \frac{1}{n} \sum (Y_i - \hat{Y}_i)^2$
 
 ### Root Mean Squared Error (RMSE)
 
-$
-\text{RMSE} = \sqrt{\text{MSE}}
-$
+$\text{RMSE} = \sqrt{\text{MSE}}$
 
 ### R² Score
 
-$
-R^2 = 1 - \frac{\sum (Y_i - \hat{Y}_i)^2}{\sum (Y_i - \bar{Y})^2}
-$
+$R^2 = 1 - \frac{\sum (Y_i - \hat{Y}_i)^2}{\sum (Y_i - \bar{Y})^2}$
 
 Assuming calculations yield:
 
@@ -213,9 +189,7 @@ Assuming calculations yield:
 ## Final Summary
 
 - **Regression Equation:**  
-  $
-  \boxed{\hat{Y} = 68.2 + 0.087 \cdot \text{Size} + 12.6 \cdot \text{Bedrooms}}
-  $
+  $\boxed{\hat{Y} = 68.2 + 0.087 \cdot \text{Size} + 12.6 \cdot \text{Bedrooms}}$
 
 - **Example Prediction:**  
   For a 2000 sqft, 4-bedroom house → \$292,600

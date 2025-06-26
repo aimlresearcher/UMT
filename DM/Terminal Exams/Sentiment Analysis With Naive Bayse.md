@@ -88,15 +88,11 @@ Predict whether a **new review** is **Positive (1)** or **Negative (0)** using *
 
 Bayes’ theorem:
 
-$
-P(\text{Class} \mid \text{Words}) = \frac{P(\text{Words} \mid \text{Class}) \cdot P(\text{Class})}{P(\text{Words})}
-$
+$P(\text{Class} \mid \text{Words}) = \frac{P(\text{Words} \mid \text{Class}) \cdot P(\text{Class})}{P(\text{Words})}$
 
 We compare:
 
-$
-\text{Score(Class)} = P(\text{Class}) \cdot \prod_{i} P(w_i \mid \text{Class})
-$
+$\text{Score(Class)} = P(\text{Class}) \cdot \prod_{i} P(w_i \mid \text{Class})$
 
 Assume:
 - Words are independent given the class
@@ -125,15 +121,11 @@ Words:
 
 ## 📦 Step 5: Word Counts & Priors
 
-$
-P(\text{Positive}) = \frac{4}{7}, \quad P(\text{Negative}) = \frac{3}{7}
-$
+$P(\text{Positive}) = \frac{4}{7}, \quad P(\text{Negative}) = \frac{3}{7}$
 
 Use Laplace smoothing:
 
-$
-P(w \mid \text{class}) = \frac{\text{count}(w, \text{class}) + 1}{N_{\text{class}} + V}
-$
+$P(w \mid \text{class}) = \frac{\text{count}(w, \text{class}) + 1}{N_{\text{class}} + V}$
 
 ---
 
@@ -152,9 +144,7 @@ $
 | worth     | 0            | 0.023                      |
 | price     | 1            | 0.045                      |
 
-$
-\text{Score(Pos)} = \frac{4}{7} \cdot 0.045 \cdot 0.045 \cdot 0.023 \cdot 0.023 \cdot 0.045 \approx 3.1 \times 10^{-8}
-$
+$\text{Score(Pos)} = \frac{4}{7} \cdot 0.045 \cdot 0.045 \cdot 0.023 \cdot 0.023 \cdot 0.045 \approx 3.1 \times 10^{-8}$
 
 ---
 
@@ -168,17 +158,13 @@ $
 | worth     | 1            | 0.048                      |
 | price     | 0            | 0.024                      |
 
-$
-\text{Score(Neg)} = \frac{3}{7} \cdot 0.024 \cdot 0.024 \cdot 0.048 \cdot 0.048 \cdot 0.024 \approx 2.7 \times 10^{-8}
-$
+$\text{Score(Neg)} = \frac{3}{7} \cdot 0.024 \cdot 0.024 \cdot 0.048 \cdot 0.048 \cdot 0.024 \approx 2.7 \times 10^{-8}$
 
 ---
 
 ## 🧾 Step 7: Classification
 
-$
-\text{Score(Pos)} = 3.1 \times 10^{-8}, \quad \text{Score(Neg)} = 2.7 \times 10^{-8}
-$
+$\text{Score(Pos)} = 3.1 \times 10^{-8}, \quad \text{Score(Neg)} = 2.7 \times 10^{-8}$
 
 ✅ **Predicted Sentiment: Positive (1)**
 
@@ -237,24 +223,16 @@ We'll evaluate the model using **leave-one-out evaluation** — predict each rev
 ## ✅ Step 3: Evaluation Metrics
 
 - **Accuracy** = (TP + TN) / Total  
-  $
-  = (4 + 3) / 7 = 1.0 
-  $
+  $= (4 + 3) / 7 = 1.0 $
 
 - **Precision** = TP / (TP + FP)  
-  $
-  = 4 / 4 = 1.0
-  $
+  $= 4 / 4 = 1.0$
 
 - **Recall** = TP / (TP + FN)  
-  $
-  = 4 / 4 = 1.0
-  $
+  $= 4 / 4 = 1.0$
 
 - **F1 Score** = 2 × (Precision × Recall) / (Precision + Recall)  
-  $
-  = 1.0
-  $
+  $= 1.0$
 
 > ⚠️ **Note**: These perfect scores reflect a very small and easy dataset — in practice, performance will be lower on unseen, noisy data.
 
