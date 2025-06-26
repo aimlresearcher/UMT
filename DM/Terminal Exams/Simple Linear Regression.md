@@ -119,7 +119,7 @@ We evaluate the model using:
 
 ### 1. Mean Squared Error (MSE)
 
-$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2$
+$(\text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2)$
 
 Using predicted \( \hat{Y} = 48.802 + 3.436X \), compute errors for each row:
 

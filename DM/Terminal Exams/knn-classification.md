@@ -64,3 +64,5 @@ Each sample includes:
 > - Petal length = 4.6 cm  
 > - Petal width = 1.5 cm  
 > Using **k = 3**
+
+# Solution
