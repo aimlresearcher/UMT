@@ -121,7 +121,7 @@ We evaluate the model using:
 
 $\text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2$
 
-Using predicted \( \hat{Y} = 48.802 + 3.436X \), compute errors for each row:
+Using predicted $\hat{Y} = 48.802 + 3.436X$, compute errors for each row:
 
 | X   | Y (actual) | $( \hat{Y} )$ | Error $( Y - \hat{Y} )$ | Squared Error |
 |-----|------------|---------------|--------------------------|----------------|
