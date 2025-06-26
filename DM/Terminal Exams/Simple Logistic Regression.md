@@ -93,21 +93,15 @@ Predict whether a student will **pass or fail** based on how many hours they stu
 
 We fit a model of the form:
 
-$
-P(Y = 1 \mid X) = \frac{1}{1 + e^{-(b_0 + b_1 X)}}
-$
+$P(Y = 1 \mid X) = \frac{1}{1 + e^{-(b_0 + b_1 X)}}$
 
 Let’s assume the model was trained using maximum likelihood estimation and yielded:
 
-$
-b_0 = -7, \quad b_1 = 1.2
-$
+$b_0 = -7, \quad b_1 = 1.2$
 
 So, the final model:
 
-$
-P(\text{Pass}) = \frac{1}{1 + e^{-(-7 + 1.2X)}} = \frac{1}{1 + e^{7 - 1.2X}}
-$
+$P(\text{Pass}) = \frac{1}{1 + e^{-(-7 + 1.2X)}} = \frac{1}{1 + e^{7 - 1.2X}}$
 
 ---
 
@@ -148,53 +142,37 @@ Calculate the predicted probabilities and binary classifications for each studen
 
 ### Accuracy
 
-$
-\text{Accuracy} = \frac{TP + TN}{Total} = \frac{3 + 4}{10} = 0.7
-$
+$\text{Accuracy} = \frac{TP + TN}{Total} = \frac{3 + 4}{10} = 0.7$
 
 ### Precision
 
-$
-\text{Precision} = \frac{TP}{TP + FP} = \frac{3}{3 + 0} = 1.0
-$
+$\text{Precision} = \frac{TP}{TP + FP} = \frac{3}{3 + 0} = 1.0$
 
 ### Recall (Sensitivity)
 
-$
-\text{Recall} = \frac{TP}{TP + FN} = \frac{3}{3 + 3} = 0.5
-$
+$\text{Recall} = \frac{TP}{TP + FN} = \frac{3}{3 + 3} = 0.5$
 
 ### F1 Score
 
-$
-F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision + Recall}} = 2 \cdot \frac{1.0 \cdot 0.5}{1.5} = 0.667
-$
+$F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision + Recall}} = 2 \cdot \frac{1.0 \cdot 0.5}{1.5} = 0.667$
 
 ### Log Loss (Simplified Calculation Example)
 
-$
-\text{Log Loss} = -\frac{1}{n} \sum \left[y_i \log(p_i) + (1 - y_i) \log(1 - p_i)\right]
-$
+$\text{Log Loss} = -\frac{1}{n} \sum \left[y_i \log(p_i) + (1 - y_i) \log(1 - p_i)\right]$
 
 For accurate computation, plug in all $( y_i )$ and $( p_i )$. Example for first value:
 
-$
-y = 0,\ p = 0.00091 \Rightarrow -\log(1 - 0.00091) \approx 0.00091
-$
+$y = 0,\ p = 0.00091 \Rightarrow -\log(1 - 0.00091) \approx 0.00091$
 
 Summing all and averaging gives approximate log loss:  
-$
-\text{Log Loss} \approx 0.31
-$
+$\text{Log Loss} \approx 0.31$
 
 ---
 
 ## Final Summary
 
 - **Model Equation:**  
-  $
-  P(\text{Pass}) = \frac{1}{1 + e^{-(-7 + 1.2X)}}
-  $
+  $P(\text{Pass}) = \frac{1}{1 + e^{-(-7 + 1.2X)}}$
 
 - **Accuracy:** 70%  
 - **Precision:** 100%  
