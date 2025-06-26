@@ -167,7 +167,7 @@ $R^2 = 1 - \frac{9.89}{82.5} = 1 - 0.12 = 0.88$
   $\hat{Y} = \boxed{48.802 + 3.436X}$
 
 - **Prediction for 7.5 hours:**  
-  $\74.57%$
+  $74.57%$
 
 - **Mean Squared Error (MSE):**  
   $\boxed{0.989}$
