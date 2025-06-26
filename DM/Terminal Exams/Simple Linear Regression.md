@@ -78,42 +78,30 @@ We are given a dataset of 10 students with two variables:
 
 $\bar{X} = \frac{1 + 2 + \dots + 10}{10} = \frac{55}{10} = 5.5$
 
-$
-\bar{Y} = \frac{52 + 55 + \dots + 85}{10} = \frac{677}{10} = 67.7
-$
+$\bar{Y} = \frac{52 + 55 + \dots + 85}{10} = \frac{677}{10} = 67.7$
 
 ---
 
 ## Step 3: Compute the Slope $( b_1 )$
 
-$
-b_1 = \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{\sum (X_i - \bar{X})^2}
-$
+$b_1 = \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{\sum (X_i - \bar{X})^2}$
 
 (See detailed table from previous step)
 
-$
-\sum (X - \bar{X})(Y - \bar{Y}) = 283.5,\quad \sum (X - \bar{X})^2 = 82.5
-$
-$
-b_1 = \frac{283.5}{82.5} \approx 3.436
-$
+$\sum (X - \bar{X})(Y - \bar{Y}) = 283.5,\quad \sum (X - \bar{X})^2 = 82.5$
+$b_1 = \frac{283.5}{82.5} \approx 3.436$
 
 ---
 
 ## Step 4: Compute the Intercept $( b_0 )$
 
-$
-b_0 = \bar{Y} - b_1 \cdot \bar{X} = 67.7 - (3.436 \cdot 5.5) = 67.7 - 18.898 = 48.802
-$
+$b_0 = \bar{Y} - b_1 \cdot \bar{X} = 67.7 - (3.436 \cdot 5.5) = 67.7 - 18.898 = 48.802$
 
 ---
 
 ## Step 5: Regression Equation
 
-$
-\hat{Y} = b_0 + b_1 X = 48.802 + 3.436 X
-$
+$\hat{Y} = b_0 + b_1 X = 48.802 + 3.436 X$
 
 ---
 
@@ -121,9 +109,7 @@ $
 
 **Predict the exam score for 7.5 hours of study:**
 
-$
-\hat{Y} = 48.802 + 3.436 \cdot 7.5 = 74.57
-$
+$\hat{Y} = 48.802 + 3.436 \cdot 7.5 = 74.57$
 
 ---
 
@@ -133,9 +119,7 @@ We evaluate the model using:
 
 ### 1. Mean Squared Error (MSE)
 
-$
-\text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2
-$
+$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2$
 
 Using predicted \( \hat{Y} = 48.802 + 3.436X \), compute errors for each row:
 
@@ -152,64 +136,44 @@ Using predicted \( \hat{Y} = 48.802 + 3.436X \), compute errors for each row:
 | 9   | 78         | 79.726        | -1.726                   | 2.979          |
 | 10  | 85         | 83.162        | 1.838                    | 3.378          |
 
-$
-\text{MSE} = \frac{1}{10}(0.057 + 0.454 + 0.792 + 0.206 + 0.0003 + 0.339 + 0.021 + 1.664 + 2.979 + 3.378) = \frac{9.89}{10} = 0.989
-$
+$\text{MSE} = \frac{1}{10}(0.057 + 0.454 + 0.792 + 0.206 + 0.0003 + 0.339 + 0.021 + 1.664 + 2.979 + 3.378) = \frac{9.89}{10} = 0.989$
 
 ---
 
 ### 2. Root Mean Squared Error (RMSE)
 
-$
-\text{RMSE} = \sqrt{MSE} = \sqrt{0.989} \approx 0.994
-$
+$\text{RMSE} = \sqrt{MSE} = \sqrt{0.989} \approx 0.994$
 
 ---
 
 ### 3. R² Score
 
-$
-R^2 = 1 - \frac{\sum (Y - \hat{Y})^2}{\sum (Y - \bar{Y})^2}
-$
+$R^2 = 1 - \frac{\sum (Y - \hat{Y})^2}{\sum (Y - \bar{Y})^2}$
 
 - Numerator: $( \sum (Y - \hat{Y})^2 = 9.89 )$
 - Denominator: $( \sum (Y - \bar{Y})^2 )$
 
 From earlier step:
 
-$
-\sum (Y - \bar{Y})^2 = \sum (X - \bar{X})(Y - \bar{Y}) \cdot \frac{1}{b_1} = \frac{283.5}{3.436} \approx 82.5
-$
+$\sum (Y - \bar{Y})^2 = \sum (X - \bar{X})(Y - \bar{Y}) \cdot \frac{1}{b_1} = \frac{283.5}{3.436} \approx 82.5$
 
-$
-R^2 = 1 - \frac{9.89}{82.5} = 1 - 0.12 = 0.88
-$
+$R^2 = 1 - \frac{9.89}{82.5} = 1 - 0.12 = 0.88$
 
 ---
 
 ## Final Answers
 
 - **Regression Equation:**  
-  $
-  \hat{Y} = \boxed{48.802 + 3.436X}
-  $
+  $\hat{Y} = \boxed{48.802 + 3.436X}$
 
 - **Prediction for 7.5 hours:**  
-  $
-  \boxed{74.57\%}
-  $
+  $\boxed{74.57\%}$
 
 - **Mean Squared Error (MSE):**  
-  $
-  \boxed{0.989}
-  $
+  $\boxed{0.989}$
 
 - **Root MSE (RMSE):**  
-  $
-  \boxed{0.994}
-  $
+  $\boxed{0.994}$
 
 - **R² Score:**  
-  $
-  \boxed{0.88}
-  $
+  $\boxed{0.88}$
