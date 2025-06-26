@@ -76,9 +76,7 @@ We are given a dataset of 10 students with two variables:
 
 ## Step 2: Calculate the Means
 
-$
-\bar{X} = \frac{1 + 2 + \dots + 10}{10} = \frac{55}{10} = 5.5
-$
+$\bar{X} = \frac{1 + 2 + \dots + 10}{10} = \frac{55}{10} = 5.5$
 
 $
 \bar{Y} = \frac{52 + 55 + \dots + 85}{10} = \frac{677}{10} = 67.7
