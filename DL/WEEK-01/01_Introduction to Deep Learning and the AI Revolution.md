@@ -58,7 +58,7 @@ Learn how to make your neural networks perform better.
 - **Optimization algorithms** (Momentum, RMSProp, Adam)  
 - **Diagnosing bias and variance**
 
-This course demystifies the so-called *“black magic”* of deep learning.
+This part demystifies the so-called *“black magic”* of deep learning.
 
 ---
 
@@ -70,7 +70,7 @@ Learn how to **strategically design** machine learning systems.
 - How to handle **training/test data mismatches** (different distributions).  
 - When to use (and when not to use) **end-to-end learning**.
 
-This course shares **hard-earned lessons from real-world AI deployments** — material rarely found in standard university syllabi.
+This part shares **hard-earned lessons from real-world AI deployments** — material rarely found in standard university syllabi.
 
 ---
 
