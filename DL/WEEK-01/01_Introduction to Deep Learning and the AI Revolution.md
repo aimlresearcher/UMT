@@ -17,7 +17,7 @@ These examples illustrate that deep learning is far more than a technical trend 
 
 If you want to be part of this **AI-powered transformation** — to design systems, build models, and contribute meaningfully to society — you need to master the tools and mindset of deep learning.
 
-By completing the specialization, you’ll be able to:
+By completing the course, you’ll be able to:
 
 - Understand the **mathematical and conceptual foundations** of deep learning.  
 - **Build, train, and optimize** neural networks.  
