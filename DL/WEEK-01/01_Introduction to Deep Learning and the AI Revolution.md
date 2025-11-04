@@ -40,7 +40,7 @@ And at the heart of this revolution is **deep learning**, the engine that drives
 
 # 4. Structure of the Course
 
-This specialization is composed of **five interconnected courses**, each designed to build upon the last.
+This course is composed of **five interconnected parts**, each designed to build upon the last.
 
 ## Part 1: Neural Networks and Deep Learning
 - Understand the **foundations of neural networks.**  
