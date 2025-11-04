@@ -90,8 +90,6 @@ Covers models for **sequential data**, such as:
 
 You’ll apply these to problems in:  
 - **Natural Language Processing (NLP)**  
-- **Speech recognition**  
-- **Music generation**
 
 ---
 
