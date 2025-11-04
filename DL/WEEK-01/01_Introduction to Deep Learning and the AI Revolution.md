@@ -95,7 +95,7 @@ You’ll apply these to problems in:
 
 # 5. Applications and Impact
 
-By the end of this specialization, you’ll have the skills to:
+By the end of this course, you’ll have the skills to:
 
 - Apply deep learning to **real-world problems.**  
 - **Build and deploy AI systems** that can learn from data.  
