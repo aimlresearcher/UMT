@@ -109,6 +109,6 @@ You’ll not only gain **technical expertise** — you’ll also develop an **in
 
 We’re entering an era where **AI is embedded in every product, every service, and every industry.**  
 
-Through these courses, I hope to equip you with the **skills, intuition, and confidence** to be an active creator in this new world.
+Through this course, I hope to equip you with the **skills, intuition, and confidence** to be an active creator in this new world.
 
 So let’s get started — in the next lecture, we’ll explore **how deep learning connects with supervised learning**, and begin to understand the mechanics of how these models actually learn.
