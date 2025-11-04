@@ -70,8 +70,6 @@ Learn how to **strategically design** machine learning systems.
 - How to handle **training/test data mismatches** (different distributions).  
 - When to use (and when not to use) **end-to-end learning**.
 
-This part shares **hard-earned lessons from real-world AI deployments** — material rarely found in standard university syllabi.
-
 ---
 
 ## Part 4: Convolutional Neural Networks (CNNs)
