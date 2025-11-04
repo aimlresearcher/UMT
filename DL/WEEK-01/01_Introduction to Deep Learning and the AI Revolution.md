@@ -17,8 +17,6 @@ These examples illustrate that deep learning is far more than a technical trend 
 
 If you want to be part of this **AI-powered transformation** — to design systems, build models, and contribute meaningfully to society — you need to master the tools and mindset of deep learning.
 
-This course and the full **Deep Learning Specialization on Coursera** are designed to help you do exactly that.
-
 By completing the specialization, you’ll be able to:
 
 - Understand the **mathematical and conceptual foundations** of deep learning.  
@@ -44,14 +42,14 @@ And at the heart of this revolution is **deep learning**, the engine that drives
 
 This specialization is composed of **five interconnected courses**, each designed to build upon the last.
 
-## Course 1: Neural Networks and Deep Learning
+## Part 1: Neural Networks and Deep Learning
 - Understand the **foundations of neural networks.**  
 - Learn how to **implement and train deep neural networks.**  
 - By the end, you’ll build your first **cat classifier** — a classic exercise that teaches end-to-end model construction.
 
 ---
 
-## Course 2: Improving Deep Neural Networks
+## Part 2: Improving Deep Neural Networks
 Learn how to make your neural networks perform better.  
 
 ### Topics include:
@@ -64,7 +62,7 @@ This course demystifies the so-called *“black magic”* of deep learning.
 
 ---
 
-## Course 3: Structuring Machine Learning Projects
+## Part 3: Structuring Machine Learning Projects
 Learn how to **strategically design** machine learning systems.
 
 ### Topics include:
@@ -76,7 +74,7 @@ This course shares **hard-earned lessons from real-world AI deployments** — ma
 
 ---
 
-## Course 4: Convolutional Neural Networks (CNNs)
+## Part 4: Convolutional Neural Networks (CNNs)
 Focused on **image data and computer vision.**
 
 You’ll learn how **CNNs** work, and how to apply them to tasks like:  
@@ -86,7 +84,7 @@ You’ll learn how **CNNs** work, and how to apply them to tasks like:
 
 ---
 
-## Course 5: Sequence Models
+## Part 5: Sequence Models
 Covers models for **sequential data**, such as:
 
 - **Recurrent Neural Networks (RNNs)**  
